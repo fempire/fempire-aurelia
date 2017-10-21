@@ -1,0 +1,8 @@
+<template>
+  <require from="./tags.css"></require>
+  <ul class="tags">
+    <li repeat.for="tag of tags">
+      <a route-href="route: topic; params.bind: { topic: tag }">${tag} <span>${topics[tag]}</span></a>
+    </li>
+  </ul>
+</template>

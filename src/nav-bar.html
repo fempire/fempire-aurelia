@@ -1,0 +1,11 @@
+<template bindable="router">
+    <nav>
+      <p>Filter by:</p>
+      <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation">
+          <a if.bind="!row.isActive" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" href.bind="row.href">${row.title}</a>
+          <span else>currently: ${row.title}</span>
+        </li>
+      </ul>
+    </nav>
+  </template>

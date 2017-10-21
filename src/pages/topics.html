@@ -1,0 +1,9 @@
+<template>
+  <h1>Filter by topic</h1>
+
+  <ul class="tags">
+      <li repeat.for="topic of topics">
+        <a route-href="route: topic; params.bind: { topic: topic.title }">${topic.title}<span>${topic.count}</span></a>
+      </li>
+    </ul>
+</template>
