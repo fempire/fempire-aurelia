@@ -1,0 +1,17 @@
+<template bindable="links, twitter, github">
+
+    <ul>
+        <li if.bind="twitter">
+            <span with.bind="twitter">
+                <a href.bind="link" title.bind="name"><i class="fa fa-twitter" aria-hidden="true"></i> ${name}</a>
+            </span>        
+        </li>
+        <li if.bind="github">
+          <a href.bind="github"><i class="fa fa-github" aria-hidden="true"></i> ${github}</a>
+        </li>
+        <li repeat.for="link of links">
+          <a href.bind="link.href"><i class="fa fa-link" aria-hidden="true"></i> ${link.title}</a>
+        </li>
+      </ul>
+
+</template>

@@ -1,0 +1,16 @@
+<template bindable="person, showType">
+    <require from="./person.css"></require>
+    <require from="./person-links.html"></require>
+    <h3>
+        ${person.name}
+        <small if.bind="person.location">${person.location}</small>
+    </h3>
+    <p if.bind="showType !== undefined">${person.type}</p>
+
+    <person-links
+      links.bind="person.links"
+      twitter.bind="person.twitter"
+      github.bind="person.githubLink"></person-links>
+
+    <tags tags.bind="person.topics"></tags>
+</template>

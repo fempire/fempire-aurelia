@@ -1,0 +1,5 @@
+<template>
+  <h1>Topic: ${topic}</h1>
+  <p>${filteredPeople.length} people found</p>
+  <person repeat.for="person of filteredPeople" person.bind="person"></person>
+</template>

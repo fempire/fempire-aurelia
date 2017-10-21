@@ -1,0 +1,35 @@
+.tags {
+  width: 30rem;
+}
+
+.tags:before, .tags:after {
+  content: '';
+  display: table;
+}
+.tags:after {
+  clear: both;
+}
+.tags li {
+  position: relative;
+  float: left;
+  margin: 1rem 1rem 0 0;
+  background-color: purple;
+  border-radius: 0.2rem;
+  padding: .5rem 1rem;
+}
+
+.tags li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.tags li a span {
+  display: inline-block;
+  padding: 0 5px;
+  line-height: 1rem;
+  font-size: 0.6rem;
+  color: white;
+  background: hotpink;
+  border-radius: 2px;
+  margin-left: 1rem;
+}
